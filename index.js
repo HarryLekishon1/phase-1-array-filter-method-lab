@@ -1,8 +1,8 @@
 // Code your solution here
-function findMatching(source, sought) {
-    return source.filter(
-        (possibleMatch) => possibleMatch.toLowerCase() === sought.toLowerCase()
-      );
+function findMatching(driver, attribute) {
+    return driver.filter(function (driver){
+      return driver.toLowerCase() === attribute.toLowerCase()
+    })
     }
     
     function fuzzyMatch(source, testString) {
@@ -12,6 +12,8 @@ function findMatching(source, sought) {
       );
     }
     
-    function matchName(source, soughtName) {
-      return source.filter((record) => record.name === soughtName);
+    function matchName(drivers, argument) {
+      return drivers.filter(function (driver){
+        return driver.name === argument;
+      });
     }
